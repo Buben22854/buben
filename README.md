@@ -23,3 +23,16 @@
 5. Нажмите **Deploy**
 
 Готово! После этого вы получите публичную ссылку на ваш сайт с автозапуском песни.
+<audio id="player" controls>
+  <source src="platina-htt.mp3" type="audio/mpeg">
+  Ваш браузер не поддерживает воспроизведение аудио.
+</audio>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('player');
+    audio.play().catch(() => {
+      console.log("Автозапуск заблокирован. Пользователь должен нажать Play.");
+    });
+  });
+</script>
